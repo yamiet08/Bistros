@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8913a5c2b2.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        img {
+            image-rendering: crisp-edges;
+            vertical-align: middle;
+        }
+
+        /************************************************************* Navigation *******************************************************/
+        .nav-style {
+            font-family: 'Kaushan Script', cursive;
+            background-color: rgb(175, 139, 50, 0.8);
+            color: #000000;
+            font-size: 24px;
+            text-decoration: none;
+            line-height: 1.5;
+            border: 1px solid rgb(175, 139, 50, 0.8);
+        }
+
+        .nav-style a {
+            font-family: 'Kaushan Script', cursive;
+            color: #000000;
+            font-size: 24px;
+            text-decoration: none;
+            line-height: 1.5;
+            width: 100%;
+        }
+
+        .nav-style a:hover {
+            background-color: #000000;
+            color: rgb(175, 139, 50);
+        }
+
+        .logos {
+            margin-right: 20px;
+            margin-top: -15px;
+            line-height: 1.5;
+        }
+
+        #p01 {
+            font-size: 40px !important;
+            line-height: 1.5;
+        }
+
+        #p02 {
+            font-size: 19px !important;
+            line-height: 1.5;
+        }
+
+        /************************************************************* Image Gallery *******************************************************/
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1140px;
+            position: relative;
+            margin: auto;
+            background-image: linear-gradient(2deg, #000000, rgb(175, 139, 50));
+            opacity: 0.8;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Caption text */
+        .text {
+            font-family: 'Anton', sans-serif !important;
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-color: rgb(250, 235, 235);
+            -webkit-text-stroke-width: 0.02px;
+            text-align: center !important;
+            top: 270px;
+            position: absolute;
+            width: 100%;
+            font-size: 50px !important;
+            font-weight: 900 !important;
+            line-height: 1.5;
+        }
+
+        .green-btn {
+            font-family: 'Kaushan Script', cursive !important;
+            background-color: rgb(218, 181, 60);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color: black;
+            font-size: 18px;
+            padding: 7px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center !important;
+            opacity: 0.9 !important;
+        }
+
+        .green-btn:hover {
+            background-color: #352831;
+            color: white;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: orange;
+            font-size: 10px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            line-height: 1.5;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0px 2px 5px 2px;
+            padding: 0;
+            background-color: rgb(112, 48, 36);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: rgb(0, 0, 0, 0.7);
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2s;
+            animation-name: fade;
+            animation-duration: 6s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /**************************************************************** Our Menus ***********************************************************/
+        .menu-div {
+            background-color: #352831 !important;
+            border: 1px solid rgb(53, 40, 49, 0.8);
+            opacity: 0.9;
+            padding-top: 80px;
+            line-height: 1.5;
+            font-family: 'Kaushan Script', cursive;
+            color: #C5A538;
+            text-align: center;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        .menu-div a {
+            color: #C5A538;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+
+        .menu-div a:hover {
+            background-color: #C5A538;
+            color: #352831;
+        }
+
+        .menu-div2 {
+            margin-top: 160px;
+            margin-bottom: 100px;
+            margin-left: 0;
+            margin-right: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu-div2 img {
+            image-rendering: pixelated;
+            vertical-align: middle;
+        }
+
+        /**************************************************************** Our chef ***********************************************************/
+        .text-sec {
+            background-color: #f5ede3 !important;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .chef-sec {
+            padding-right: 28px;
+            padding-left: 20px;
+        }
+
+        .critic-sec {
+            padding-right: 20px;
+            padding-left: 20px;
+            border-left: 1px dashed grey;
+        }
+
+        .star {
+            -webkit-text-fill-color: gold;
+            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-width: 1.50px;
+        }
+
+        .name {
+            -webkit-text-fill-color: green;
+            -webkit-text-stroke-color: green;
+            -webkit-text-stroke-width: 1.00px;
+            float: right;
+            font-size: 14px;
+        }
+
+        /**************************************************************** footer ***********************************************************/
+        .foot {
+            opacity: 0.9;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-color: #C5A538 !important;
+        }
+
+        .bottom-image {
+            background: url(images/footer.png);
+            height: 56px;
+        }
+
+        #p03 {
+            font-size: 14px;
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        #p04 {
+            font-size: 16px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        #p05 {
+            font-size: 16px;
+            text-align: right;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(to bottom, rgb(112, 48, 36) , #D0BA4B,  rgb(112, 48, 36) );
+background-repeat: repeat;">
+
+    <!--************************************************************* Navigation *******************************************************-->
+    <header>
+        <nav class=" navbar navbar-expand-md fixed-top container nav-style">
+            <div class="container-fluid">
+                <div class="navbar-header logos">
+                    <a class="navbar-brand" href="#">
+                        <strong id="p01">Bistros</strong>&nbsp;&nbsp;<i id="p02">Jacksonville,FL</i>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon" style="color: #000000; font-size:35px;"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-between w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reservations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-star" aria-hidden="true"></i>Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">1-800-123-4567</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><br><br><br>
+
+    <!--************************************************************* End Navigation *******************************************************-->
+
+
+    <!--************************************************************** Image Gallery *******************************************************-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <figure>
+                <img src="images/bistro0.png" alt="bistro image 1" class="img-fluid">
+            </figure>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <figure>
+                <img src="images/bistro3.png" alt="bistro image 2" class="img-fluid">
+            </figure>
+            <div class="text">
+                <p class="">Voted Best New Restaurant in Jacksonville!</p>
+                <button class="green-btn"><b style="color: black !important;">Order Online</b></button>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <figure>
+                <img src="images/bistro4.png" alt="bistro image 3" class="img-fluid">
+            </figure>
+            <div class="text">
+                <p class="">Voted Best New Restaurant in Jacksonville!</p>
+                <button class="green-btn" style="color: black !important;"><b>Order Online</b></button>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <figure>
+                <img src="images/bistro2.png" alt="bistro image 4" class="img-fluid">
+            </figure>
+            <div class="text">
+                <p class="">Voted Best New Restaurant in Jacksonville!</p>
+                <button class="green-btn" style="color: black !important;"><b>Order Online</b></button>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!--************************************************************ End Image Gallery *******************************************************-->
+
+
+    <!--**************************************************************** Our Menus ***********************************************************-->
+    <div class="container">
+        <div class="row menu-div">
+            <div class="col-md-12">
+                <h1>Our Menus</h1>
+                <div class="menu-div2 justify-content-between w-100">
+                    <div class="col-md-4">
+                        <img src="images/breakfast.png" alt="Image of Breakfast" class="img-fluid">
+                        <h2><a href="#" class="nav-link">Breakfast</a></h2>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/lunch.png" alt="Image of Lunch" class="img-fluid">
+                        <h2><a href="#" class="nav-link">Lunch</a></h2>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/dinner.png" alt="Image of Dinner" class="img-fluid">
+                        <h2><a href="#" class="nav-link">Dinner</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--************************************************************  End Our Menus ***********************************************************-->
+
+
+    <!--********************************************************  Our Chef and Reviews ********************************************************-->
+    <div class="container">
+        <div class="row text-sec">
+            <div class="col-md-6 chef-sec">
+                <h2>Our Chef: John Cook</h2><br>
+                <p>
+                    <figure><img src="images/chef.jpg" alt="Chef Image" style="width:160px; height:150px; float: right;"
+                            class="img-fluid"></figure>
+                    Lorem ipsum dolor sit amet, consectet<br>adipisicing elit. Quasi quibusdam tatum <br>similique
+                    reprehenderit
+                    voluptatibus.<br>
+                    placeat maxime Laudantium blanditiis<br>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.<br>Lorem
+                    ipsum dolor a, magni quibusdam
+                    quam quibusdam!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Lorem ipsum dolor
+                    sit
+                    amet
+                    consectetur adipisicing elit.
+                    <br><br><i class="fa fa-facebook" aria-hidden="true" style="color:rgb(21, 53, 196);"></i>
+                    &nbsp;&nbsp;&nbsp;<i class="fa fa-twitter" aria-hidden="true" style="color:rgb(44, 153, 241);"></i>
+                    &nbsp;&nbsp;&nbsp;<i class="fa fa-youtube" aria-hidden="true" style="color: red;"></i>
+                </p>
+            </div>
+
+            <div class="col-md-6 critic-sec">
+                <h2>Critical Acclaim</h2><br>
+                <p><span class="star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i></span><q>Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Fugiat labore iure dolores
+                        cupiditate modi quae architecto ex eos necessitatibus harum fugit explicabo atque earum ipsum
+                        suscipit,
+                        neque quaerat dolor nobis.</q><br>
+                    <span class="name">--The Jacsonville Sun</span></p><br><br>
+
+                <p><span class="star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i></span><q>Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit.
+                        Fugiat labore iure dolores cupiditate modi quae architecto ex eos necessitatibus harum fugit
+                        explicabo
+                        atque earum ipsum suscipit, neque quaerat dolor nobis.</q><br><span class="name">--The Phantom
+                        Gourmet</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!--******************************************************  End Our Chef and Reviews *******************************************************-->
+
+
+    <!--**************************************************************** Footer ****************************************************************-->
+    <div class="container">
+        <div class="row foot">
+            <div class="col-md-4 bottom-image" id="p03">
+                <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2018, Bistros LLC</p>
+            </div>
+            <div class="col-md-4 bottom-image" id="p04">
+                <p>Bistros 123 Main St., Jax, FL</p>
+            </div>
+            <div class="col-md-4 bottom-image" id="p05">
+                <p>Privacy Policy | Terms of Use</p>
+            </div>
+        </div>
+    </div>
+
+    <!--*************************************************************** End Footer ***************************************************************-->
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!--********************************************************** Bootsrap 4 scripts ******************************************************-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
